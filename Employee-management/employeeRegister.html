@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="Register-container register">
+        <main>
+            <div>
+                <h1>Employee Registration</h1>
+                <p>Complete the form below to create your employee account</p>
+            </div>
+            <form id="employeeRegistrationForm">
+                <section class="form-section">
+                    <h2>Personal Information</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="empFirstName">First Name</label>
+                            <input type="text" id="empFirstName" required placeholder="Enter first name">
+                        </div>
+                        <div class="form-group">
+                            <label for="empLastName">Last Name</label>
+                            <input type="text" id="empLastName" required placeholder="Enter last name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="empDob">Date of Birth</label>
+                            <input type="text" id="empDob" placeholder="MM/DD/YYYY" onfocus="(this.type='date')">
+                        </div>
+                        <div class="form-group">
+                            <label for="empGender">Gender</label>
+                            <select id="empGender" required>
+                                <option value="">Select one</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2>Employment Details</h2>
+                    <div class="form-group">
+                        <label for="empDesignation">Job Title/Designation</label>
+                        <select id="empDesignation" required>
+                            <option value="">Select one</option>
+                            <option value="Store Manager">Store Manager</option>
+                            <option value="Sales Associate">Sales Associate</option>
+                            <option value="Inventory Manager">Inventory Manager</option>
+                            <option value="Cashier">Cashier</option>
+                            <option value="Tailor">Tailor</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="empJoinDate">Date of Joining</label>
+                            <input type="text" id="empJoinDate" placeholder="MM/DD/YYYY" onfocus="(this.type='date')">
+                        </div>
+                        <div class="form-group">
+                            <label for="empSalary">Salary</label>
+                            <input type="number" id="empSalary" placeholder="Enter amount">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2>Contact & Security</h2>
+                    <div class="form-group">
+                        <label for="empPhone">Phone Number</label>
+                        <div class="input-with-button">
+                            <input type="tel" id="empPhone" required placeholder="Enter phone number">
+                            <button type="button" id="verifyEmpMobileBtn" class="btn-verify">Verify Phone</button>
+                        </div>
+                        <div id="empMobileOtpContainer" class="otp-container hidden">
+                            <input type="text" id="empMobileOtp" placeholder="Enter OTP" maxlength="6">
+                            <button type="button" id="submitEmpMobileOtpBtn" class="btn-submit-otp">Submit</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="empAltPhone">Alternate Mobile Number (Optional)</label>
+                        <input type="tel" id="empAltPhone" placeholder="Enter alternate number">
+                    </div>
+                    <div class="form-group">
+                        <label for="empPassword">Password</label>
+                        <input type="password" id="empPassword" required placeholder="Create password">
+                    </div>
+                    <div class="form-group">
+                        <label for="empConfirmPassword">Confirm Password</label>
+                        <input type="password" id="empConfirmPassword" required placeholder="Confirm password">
+                    </div>
+                </section>
+
+                <div class="form-actions">
+                    <button type="submit" id="createEmpAccountBtn" class="btn-primary" disabled>Create Employee
+                        Account</button>
+                </div>
+
+                <p class="terms">By registering, you agree to our <a href="#">Terms of Service</a> and <a
+                        href="#">Privacy Policy</a>.</p>
+                <p class="login-link">Already have an account? <a href="#">Login</a></p>
+            </form>
+        </main>
+    </div>
+    <script src="/Script/navbar.js"></script>
+    <script src="/Script/employee_register.js"></script>
+</body>
+
+</html>
